@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ithee Bhanushali | Finance & Creative Professional</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const titles = [
+        "Finance Professional",
+        "Content Creator",
+        "Operations Ninja",
+        "Creative Storyteller"
+      ];
+      let i = 0;
+      const textElement = document.querySelector(".rotating-text");
+      let charIndex = 0;
+      let isDeleting = false;
+
+      function type() {
+        const currentTitle = titles[i];
+
+        if (!isDeleting) {
+          charIndex++;
+          textElement.textContent = currentTitle.substring(0, charIndex);
+        } else {
+          charIndex--;
+          textElement.textContent = currentTitle.substring(0, charIndex);
+        }
+
+        if (!isDeleting && charIndex === currentTitle.length) {
+          setTimeout(() => {
+            isDeleting = true;
+            type();
+          }, 1200);
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          i = (i + 1) % titles.length;
+          setTimeout(type, 400);
+        } else {
+          setTimeout(type, isDeleting ? 50 : 100);
+        }
+      }
+
+      type();
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>I’m Ithee Bhanushali —</h1>
+    <h2 class="rotating-text">Finance Professional</h2>
+    <p class="sub-info">📍 Mumbai, India<br />🎓 B.M.S. in Accounting & Finance, Mumbai University</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#video">Video</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+  <h3>About Me</h3>
+  <div style="display: flex; flex-direction: row; gap: 30px; align-items: center; flex-wrap: wrap;">
+    <!-- Profile Photo -->
+    <img src="profile.jpg" alt="Ithee Bhanushali" class="profile-pic">
+
+    <!-- About Text -->
+    <div style="flex: 1; min-width: 250px;">
+      <p>Hi, I’m Ithee — a finance and operations professional.</p>
+      <p>📍 Mumbai, India<br>🎓 B.M.S. in Accounting & Finance, Mumbai University</p>
+      <p>
+        I bring experience working with US/Canada-based clients across accounts payable and receivable,
+        invoice processing, payroll support, credit card reconciliation, and more — with a sharp focus
+        on accuracy, clarity, and process ownership.
+      </p>
+      <p>
+        Beyond numbers, I’m a content creator, fiction writer, and video storyteller.
+        I believe creative thinking enhances structured problem solving — and that’s
+        what makes my work uniquely effective.
+      </p>
+      <p>
+        I’m currently open to remote opportunities across finance, operations, and strategy —
+        where I can grow, contribute, and bring value across functions.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <section id="skills">
+    <h3>Skills</h3>
+    <div class="skills-container">
+      <h4>Finance Tools / ERP Systems</h4>
+      <div class="skill"><span><strong>Zoho Books</strong><strong>98%</strong></span><div class="bar"><div class="fill" style="width:98%"></div></div></div>
+      <div class="skill"><span><strong>McLeod</strong><strong>95%</strong></span><div class="bar"><div class="fill" style="width:95%"></div></div></div>
+      <div class="skill"><span><strong>Tailwinds Accounting</strong><strong>100%</strong></span><div class="bar"><div class="fill" style="width:100%"></div></div></div>
+      <div class="skill"><span><strong>QuickBooks</strong><strong>50%</strong></span><div class="bar"><div class="fill" style="width:50%"></div></div></div>
+      <div class="skill"><span><strong>Tally ERP</strong><strong>50%</strong></span><div class="bar"><div class="fill" style="width:50%"></div></div></div>
+
+      <h4>SaaS & Accounting Platforms</h4>
+      <div class="skill"><span><strong>Bill.com</strong><strong>80%</strong></span><div class="bar"><div class="fill" style="width:80%"></div></div></div>
+      <div class="skill"><span><strong>PN3</strong><strong>80%</strong></span><div class="bar"><div class="fill" style="width:80%"></div></div></div>
+      <div class="skill"><span><strong>UNO BRS</strong><strong>75%</strong></span><div class="bar"><div class="fill" style="width:75%"></div></div></div>
+      <div class="skill"><span><strong>Syncada</strong><strong>80%</strong></span><div class="bar"><div class="fill" style="width:80%"></div></div></div>
+      <div class="skill"><span><strong>Samsara</strong><strong>70%</strong></span><div class="bar"><div class="fill" style="width:70%"></div></div></div>
+
+      <h4>Other Skills</h4>
+      <div class="skill"><span><strong>Advanced Excel</strong><strong>95%</strong></span><div class="bar"><div class="fill" style="width:95%"></div></div></div>
+      <div class="skill"><span><strong>Microsoft Office</strong><strong>98%</strong></span><div class="bar"><div class="fill" style="width:98%"></div></div></div>
+      <div class="skill"><span><strong>Google Workspace</strong><strong>90%</strong></span><div class="bar"><div class="fill" style="width:90%"></div></div></div>
+      <div class="skill"><span><strong>Communication</strong><strong>95%</strong></span><div class="bar"><div class="fill" style="width:95%"></div></div></div>
+      <div class="skill"><span><strong>Creative Writing</strong><strong>88%</strong></span><div class="bar"><div class="fill" style="width:88%"></div></div></div>
+      <div class="skill"><span><strong>Process Management</strong><strong>90%</strong></span><div class="bar"><div class="fill" style="width:90%"></div></div></div>
+      <div class="skill"><span><strong>Client Coordination</strong><strong>90%</strong></span><div class="bar"><div class="fill" style="width:90%"></div></div></div>
+      <div class="skill"><span><strong>Accounts Reconciliation</strong><strong>92%</strong></span><div class="bar"><div class="fill" style="width:92%"></div></div></div>
+      <div class="skill"><span><strong>Content Creation</strong><strong>90%</strong></span><div class="bar"><div class="fill" style="width:90%"></div></div></div>
+    </div>
+  </section>
+
+  <section id="video">
+    <h3>Intro Video</h3>
+    <video width="100%" height="360" controls>
+      <source src="Short Intro Video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section id="resume">
+    <h3>Resume</h3>
+    <a href="Ithee Bhanushali CV UPD.pdf" target="_blank">📄 View My Resume</a>
+  </section>
+
+  <section id="contact">
+    <h3>Let’s Connect</h3>
+    <p>📬 itheebhanushali04@gmail.com</p>
+    <p>🔗 <a href="https://www.linkedin.com/in/ithee-shinde-bhanushali-bb955622b" target="_blank">LinkedIn</a></p>
+    <p>Let’s create something that works — and something that lasts.</p>
+  </section>
+</body>
+</html>
